@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.animated-arrows-container {
+  display: flex;
+  flex-direction: column; /* Alineación vertical */
+  align-items: center;
+  height: 100vh; /* Ajusta la altura según tus necesidades */
+}
+
+.arrow-container {
+  margin: 1px; /* Espacio entre flechas */
+  animation: fadeInDown 0.5s ease-in-out; /* Agrega una animación de entrada */
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#container-bar {
+  width: 50%;
+  margin-top: 3%;
+  margin-left: 2%;
+  align-items: center;
+  display: flex;
+}
+
+#label-bar {
+  display: block;
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border-radius: 0.4rem;
+  border: 4px solid rgb(17, 151, 196);
+  overflow: hidden;
+  box-shadow: 1px 0 8px 0 rgba(27, 95, 221, 0.76);
+  position: relative;
+  margin-left: 5%;
+}
+
+#fill {
+  height: 100%;
+  width: 20%;
+  transition: width 2s;
+  box-shadow: 0 0 8px 1px white inset;
+  background: linear-gradient(to bottom, #A3E2EF 35%, #4F9CC0);
+  position: relative;
+  z-index: 1;
+}
+
+#fill::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/172299/bubbles-mask.gif);
+  mix-blend-mode: overlay;
+  opacity: 0.5;
+  z-index: 2;
+}
+
+#progress {
+  color: lightblue;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-top: 0.7rem;
+  text-align: right;
+}
+
+#water:checked + label #fill {
+  width: 100%;
+}
+
+@keyframes wave-animation {
+  0% {
+    background-position: 0 bottom;
+  }
+  100% {
+    background-position: 200px bottom;
+  }
+}
+
+@keyframes loading-animation {
+  0% {
+    background-size: 200px 0px;
+  }
+  100% {
+    background-size: 200px 200px;
+  }
+}
