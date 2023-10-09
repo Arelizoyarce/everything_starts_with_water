@@ -45,7 +45,7 @@ function QuestionsCard({ questions, handleOptionChange, isPlaying }) {
                     backgroundColor: '#EAF9FF'
                 }}
             >
-                <Typography style={{fontSize: '20px'}} variant="subtitle1">
+                <Typography style={{fontSize: '20px', fontWeight: 600}} variant="subtitle1">
                     {typedText}
                 </Typography>
             </Card>

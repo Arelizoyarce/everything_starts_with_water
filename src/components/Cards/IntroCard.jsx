@@ -39,7 +39,7 @@ function IntroCard({ text, isPlaying, pauseAudio, playAudio }) {
             >
                 <Grid container direction="column">
                     <Box>
-                        <Typography style={{fontSize: '20px'}} variant="subtitle1">{typedText}</Typography>
+                        <Typography style={{fontSize: '20px', fontWeight: 600}} variant="subtitle1">{typedText}</Typography>
                     </Box>
                 </Grid>
             </Card>

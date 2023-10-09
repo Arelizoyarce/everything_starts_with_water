@@ -74,7 +74,7 @@ function ResultCard({ isCorrect, dialogue, isPlaying }) {
                         marginLeft:'17%'
                     }}
                 >
-                    <Typography style={{fontSize: '20px'}} variant="subtitle1">{typedText2 ===  '' ? '...' : typedText2}</Typography>
+                    <Typography style={{fontSize: '20px',  fontWeight: 600}} variant="subtitle1">{typedText2 ===  '' ? '...' : typedText2}</Typography>
                 </Card>
                 <img
                     style={{ transform: "scaleX(-1)" }}
